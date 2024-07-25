@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.DESAFIOS;
 
 public class CelsiusParaFahrenheit{
     public static void main(String[] args){
