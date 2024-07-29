@@ -1,6 +1,6 @@
-package exercicios.DESAFIOS;
+package exercicios.DESAFIOS.desafios1;
 
-public class CelsiusParaFahrenheit{
+ class CelsiusParaFahrenheit{
     public static void main(String[] args){
         int temperatura = 100;
         double formula = (temperatura *1.8) + 32;

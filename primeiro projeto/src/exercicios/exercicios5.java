@@ -3,7 +3,7 @@ package exercicios;
 import java.util.Scanner;
 
 //1
-public class exercicios5 {
+ class exercicios5 {
     public static void main(String[] args) {
         ContaBancaria banco = new ContaBancaria();
         banco.setSaldo(1599.99);

@@ -1,8 +1,8 @@
-package exercicios.DESAFIOS;
+package exercicios.DESAFIOS.desafios1;
 
 import java.util.Scanner;
 
-public class Banco {
+class Banco {
         public static void main(String[] args) {
         int opcao = 0;
        String nome = "Daniel";

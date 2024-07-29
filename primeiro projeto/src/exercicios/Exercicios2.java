@@ -1,6 +1,6 @@
 package exercicios;
 //1
-public class Exercicios2 {
+ class Exercicios2 {
     public static void main(String[] args){
         double nota1 = 10;
         double nota2 = 28;
@@ -10,7 +10,7 @@ public class Exercicios2 {
     
 }
 //2 3 e 4
-abstract class MediaString {
+   class MediaString {
     public static void main(String[] args) {
         double n1 = 2.4;
         int n3 = (int) n1;

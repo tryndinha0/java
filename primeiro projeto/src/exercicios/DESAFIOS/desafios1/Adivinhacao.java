@@ -1,9 +1,9 @@
-package exercicios.DESAFIOS;
+package exercicios.DESAFIOS.desafios1;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Adivinhacao {
+  class Adivinhacao {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int randomnum = new Random().nextInt(100);

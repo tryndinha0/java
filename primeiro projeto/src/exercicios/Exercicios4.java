@@ -3,7 +3,7 @@ package exercicios;
 import java.util.Scanner;
 
 //1
-public class Exercicios4 {
+ class Exercicios4 {
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
@@ -53,7 +53,7 @@ class Musica {
 }
 
 // 4
-class Carro {
+    class Carro {
     private String modelo;
     private int ano;
     private String cor;

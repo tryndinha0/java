@@ -1,6 +1,7 @@
+package exercicios.DESAFIOS;
 import java.util.Scanner;
 
-public class Leitura {
+ class Leitura {
     public static void main(String[] args){
         Scanner leitura = new Scanner(System.in);
 

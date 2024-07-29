@@ -1,6 +1,6 @@
-package ScreenMatch;
+package ScreenMatch.modelos;
 
-public class Filme {
+public class Titulo {
     private String nome;
     private int anoDeLancamento;
     private boolean inlcuidoNoPlano;
@@ -8,12 +8,15 @@ public class Filme {
     private int totalDeAvaliacoes=0;
     private int duracaoEmMinutos;
 
-    int gettotalDeAvaliacoes(){
+    public int gettotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }
-
+    
     public void setNome(String nome){
         this.nome = nome;
+    }
+    public String getNome(){
+        return nome;
     }
     
     public void setincluidoNoPlano(boolean inlcuidoNoPlano){
@@ -25,19 +28,22 @@ public class Filme {
     public void setduracaoEmMinutos(int duracaoEmMinutos){
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
+    public int getDuracaoEmMinutos(){
+        return duracaoEmMinutos;
+    }
 
-    void exibeFichaTecnica(){
+    public void exibeFichaTecnica(){
         System.out.println("Nome do filme " + nome);
         System.out.println("Ano de lançamento " + anoDeLancamento);
         System.out.println("Duração em minutos: " + duracaoEmMinutos);
         System.out.println("Icluído no plano: " + inlcuidoNoPlano);
     }
 
-    void avalia(double nota){
+    public void avalia(double nota){
         SomaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
-    double obterMedia(){
+    public double obterMedia(){
         return SomaDasAvaliacoes/totalDeAvaliacoes;
     }
 }
