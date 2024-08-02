@@ -1,12 +1,17 @@
 package ScreenMatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     private String nome;
     private int anoDeLancamento;
     private boolean inlcuidoNoPlano;
     private double SomaDasAvaliacoes;
     private int totalDeAvaliacoes=0;
     private int duracaoEmMinutos;
+    
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
 
     public int gettotalDeAvaliacoes(){
         return totalDeAvaliacoes;
@@ -18,7 +23,9 @@ public class Titulo {
     public String getNome(){
         return nome;
     }
-    
+    public int getAnoDeLancamento(){
+        return this.anoDeLancamento;
+    }
     public void setincluidoNoPlano(boolean inlcuidoNoPlano){
         this.inlcuidoNoPlano = inlcuidoNoPlano;
     }
@@ -46,4 +53,10 @@ public class Titulo {
     public double obterMedia(){
         return SomaDasAvaliacoes/totalDeAvaliacoes;
     }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
+    
 }

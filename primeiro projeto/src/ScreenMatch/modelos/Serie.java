@@ -1,10 +1,16 @@
 package ScreenMatch.modelos;
 
 public class Serie extends Titulo {
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
     private int temporadas;
     private boolean ativa;
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
+    
+
+
     public int getTemporadas() {
         return temporadas;
     }
@@ -32,5 +38,9 @@ public class Serie extends Titulo {
     @Override
     public int getDuracaoEmMinutos(){
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
+    @Override
+    public String toString() {
+        return "Serie: " + this.getNome() + "("+ this.getAnoDeLancamento() + ")";
     }
 }
