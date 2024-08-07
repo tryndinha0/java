@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.google.gson.Gson;
+
 import ScreenMatch.modelos.Filme;
 import ScreenMatch.modelos.Serie;
 import ScreenMatch.modelos.Titulo;
@@ -49,5 +51,6 @@ class PrincipalComListas {
         lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
         System.out.println("Ordenando por ano");
         System.out.println(lista);
+        
     }
 }
