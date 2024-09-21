@@ -19,12 +19,13 @@ class ConsultaLivrosGoogle {
 
 
 
-        String chave = "AIzaSyCiXTJOO9Mmv6IlamOlTezGqqxgxxGBvjk";
+        String chave = "";
         String endereco = "https://www.googleapis.com/books/v1/volumes?q=" + encodedQuery + "&key=" + chave;
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(endereco)).build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         System.out.println(response.body());
+        //tentando apagar uma linha
     }
 }
