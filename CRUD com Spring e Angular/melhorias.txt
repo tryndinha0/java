@@ -1,0 +1,34 @@
+Front 
+
+Corrigir ordenacao da table.
+Corrigir na quantidade de itens por página ao paginar.
+Colocar máscara monetaria no campo de preco
+Colocar máscara monetária no modal de inserção/edição
+Alterar cor da lixeira
+Alterar com do lápis.
+
+Back
+
+Corrigir query de busca no back end pra buscar quando houver acento ou nao na buscar
+
+Remover campo de descricao dos Produtos quando vierem carregados para a pagina e 
+somente ao editar , ele deve vir , sendo assim , ao editar , devemos buscar esse item
+por ID no banco de dados e trazer ele com o campo description
+
+
+
+
+
+
+
+
+
+------------------------
+
+
+
+Corrigir paginacao de produtos:
+
+Cenario-> Página inicia carregando quantidade indevida de produtos , ainda que comece com 
+o predefinido pelo cliente , o back traz todos
+
