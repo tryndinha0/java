@@ -1,0 +1,46 @@
+# Configuracao unica para os tres provedores.
+# Nenhum valor especifico de AWS, Azure ou Google Cloud aparece aqui:
+# tudo o que muda de um ambiente para outro entra por variavel de ambiente,
+
+spring:
+  application:
+    name: cloud-compare-api
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:cloudcompare}
+    username: ${DB_USER:cloudcompare}
+    password: ${DB_PASSWORD:cloudcompare}
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:10}
+
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_DDL_AUTO:update}
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: ${SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+
+logging:
+  level:
+    root: INFO
+    br.tcc: INFO

@@ -1,0 +1,36 @@
+# Ambiente de desenvolvimento local, apenas para validar a aplicacao antes do
+# deploy na nuvem. Em producao, o banco e um servico gerenciado (RDS / Azure
+# Database / Cloud SQL), nao este container de banco.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: cloudcompare
+      POSTGRES_USER: cloudcompare
+      POSTGRES_PASSWORD: cloudcompare
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cloudcompare"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: cloudcompare
+      DB_USER: cloudcompare
+      DB_PASSWORD: cloudcompare
+    ports:
+      - "8080:8080"
+
+volumes:
+  db-data:
